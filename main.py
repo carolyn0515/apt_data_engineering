@@ -128,7 +128,7 @@ def main():
 
     for deal_ymd in ["202401"]:
         for lawd_cd in list_lawd_cd:
-            file_name = f"{deal_ymd}_{lawd_cd}_result.json"
+            file_name = f"json_data/{deal_ymd}_{lawd_cd}_result.json"
             object_name = f"apt-trade-raw/deal_ymd={deal_ymd}/lawd_cd={lawd_cd}/result.json"
 
             # 1. API를 통해서 데이터 가져오기
