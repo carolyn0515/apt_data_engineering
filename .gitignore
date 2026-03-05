@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# venv
+.venv/
+venv/
+
+# env
+.env
+
+# data (원하면)
+*.json
+*.jsonl
+*.csv
+*.parquet
+
+# macOS
+.DS_Store
