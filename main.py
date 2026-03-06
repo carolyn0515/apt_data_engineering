@@ -1,7 +1,7 @@
 def processing_datas(root):
     """
         데이터 저장 형태
-        [{거래 #1}, {거래 #2}]
+        [{거래 #1}, {거래 #2}] -> column 세팅되는 구조! 
     """
     list_temp = list()
 
@@ -126,9 +126,9 @@ def main():
         , "11740"  # 강동구
     ]
 
-    for deal_ymd in ["202401"]:
+    for deal_ymd in [f"{year}{month:02d}" for year in range(2024, 2026) for month in range(1, 13) if f"{year}{month:02d}" <= "202502"]:
         for lawd_cd in list_lawd_cd:
-            file_name = f"json_data/{deal_ymd}_{lawd_cd}_result.json"
+            file_name = f"{deal_ymd}_{lawd_cd}_result.json"
             object_name = f"apt-trade-raw/deal_ymd={deal_ymd}/lawd_cd={lawd_cd}/result.json"
 
             # 1. API를 통해서 데이터 가져오기
